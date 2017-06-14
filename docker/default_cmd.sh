@@ -13,6 +13,8 @@ if ! cd $SRC; then
 fi
 make clean
 make 
+# Linha de Execução do Programa
 ./program
+# Execução com Gprof
 gprof program gmon.out > profile-data.txt
 
