@@ -5,7 +5,7 @@ void hello_world() {
     int i, j;
     printf("Hello, World!\n");
     for (i = 0; i < 1000000; i++) {
-        for (j = 0; j < 1000000; j++) {
+        for (j = 0; j < 100; j++) {
             total++;
         }
     }
