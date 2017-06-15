@@ -19,7 +19,8 @@ cd ..
 JPEG=./jpeg-6a/cjpeg 
 
 # Linha de Execução do Programa
-$JPEG -dct int -progressive -opt -outfile output_small_encode.jpeg input_small.ppm
+$JPEG -dct int -progressive -opt -outfile output_large_encode.jpeg input_large2.ppm
+
 # Execução com Gprof
 gprof $JPEG gmon.out > profile-data.txt
 
