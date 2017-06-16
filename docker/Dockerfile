@@ -4,7 +4,7 @@ MAINTAINER Felipe Gonçalves Marques
 # Packages
 RUN apt-get update && \
     apt-get install --no-install-recommends -y binutils locales \
-    gcc make build-essential \
+    gcc make build-essential libcv-dev libopencv-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Environment

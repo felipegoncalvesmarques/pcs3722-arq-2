@@ -11,15 +11,13 @@ SRC=/home/student/src
 if ! cd $SRC; then
     fail "Mount a volume with the program being to be profiled under $SRC"
 fi
-cd jpeg-6a
 make clean
 make all
-cd ..
 
-JPEG=./jpeg-6a/cjpeg 
+JPEG=./jpec 
 
 # Linha de Execução do Programa
-$JPEG -dct int -progressive -opt -outfile output_large_encode.jpeg input_large2.ppm
+$JPEG test.png
 
 # Execução com Gprof
 gprof $JPEG gmon.out > profile-data.txt
