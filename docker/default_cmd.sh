@@ -17,7 +17,7 @@ make all
 JPEG=./jpec 
 
 # Linha de Execução do Programa
-$JPEG test.png
+$JPEG input_large2.png
 
 # Execução com Gprof
 gprof $JPEG gmon.out > profile-data.txt
