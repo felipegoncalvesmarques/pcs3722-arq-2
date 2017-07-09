@@ -49,7 +49,11 @@ jpec_enc_t *jpec_enc_new(const uint8_t *img, uint16_t w, uint16_t h) {
 }
 
 jpec_enc_t *jpec_enc_new2(const uint8_t *img, uint16_t w, uint16_t h, int q) {
-  assert(img && w > 0 && !(w & 0x7) && h > 0 && !(h & 0x7));
+  assert(img);
+  assert(w > 0);
+  assert(!(w & 0x7));
+  assert(h > 0); 
+  assert(!(h & 0x7));
   jpec_enc_t *e = malloc(sizeof(*e));
   e->img = img;
   e->w = w;
@@ -212,6 +216,14 @@ static void jpec_enc_block_dct(jpec_enc_t *e) {
 #define JPEC_BLOCK(col,row) e->img[(((e->by + row) < e->h) ? e->by + row : e->h-1) * \
                             e->w + (((e->bx + col) < e->w) ? e->bx + col : e->w-1)]
   const float* coeff = jpec_dct;
+  FILE *fp = fopen("file.txt", "a");
+  fprintf(fp, "Block\n");
+  for (int row = 0; row < 8; row++) {
+    for (int col = 0; col < 8; col++) {
+      fprintf(fp, "%d ", JPEC_BLOCK(col, row));
+    }
+    fprintf(fp, "\n");
+  }
   float tmp[64];
   for (int row = 0; row < 8; row++) {
     /* NOTE: the shift by 256 allows resampling from [0 255] to [–128 127] */
@@ -254,6 +266,15 @@ static void jpec_enc_block_dct(jpec_enc_t *e) {
     e->block.dct[48 + col] = coeff[5]*(s0-s3)+coeff[1]*(s2-s1);
     e->block.dct[56 + col] = coeff[6]*d0-coeff[4]*d1+coeff[2]*d2-coeff[0]*d3;
   }
+  fprintf(fp, "Dct\n");
+  for (int row = 0; row < 8; row++) {
+    for (int col = 0; col < 8; col++) {
+      fprintf(fp, "%.3f ", e->block.dct[row * 8 + col]);
+    }
+    fprintf(fp, "\n");
+  }
+  fclose(fp);
+
 #undef JPEC_BLOCK
 }
 
