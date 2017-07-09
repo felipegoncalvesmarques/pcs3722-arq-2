@@ -279,10 +279,36 @@ static void jpec_enc_block_dct(jpec_enc_t *e) {
 }
 
 static void jpec_enc_block_quant(jpec_enc_t *e) {
+  FILE *fp = fopen("quant.txt", "a");
+  fprintf(fp, "DCT\n");
+  for (int row = 0; row < 8; row++) {
+    for (int col = 0; col < 8; col++) {
+      fprintf(fp, "%.3f ", e->block.dct[row * 8 + col]);
+    }
+    fprintf(fp, "\n");
+  }
+
+  fprintf(fp, "DQT\n");
+  for (int row = 0; row < 8; row++) {
+   for (int col = 0; col < 8; col++) {
+     fprintf(fp, "%d ", e->dqt[row * 8 + col]);
+   }
+   fprintf(fp, "\n");
+  }
   assert(e && e->bnum >= 0);
   for (int i = 0; i < 64; i++) {
     e->block.quant[i] = (int) (e->block.dct[i]/e->dqt[i]);
   }
+
+  fprintf(fp, "Quant\n");
+  for (int row = 0; row < 8; row++) {
+   for (int col = 0; col < 8; col++) {
+     fprintf(fp, "%d ", e->block.quant[row * 8 + col]);
+   }
+   fprintf(fp, "\n");
+  }
+  fclose(fp);
+
 }
 
 static void jpec_enc_block_zz(jpec_enc_t *e) {
