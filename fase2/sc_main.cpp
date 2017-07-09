@@ -23,8 +23,8 @@ int sc_main(int argc, char* argv[]) {
   }
   sc_start();
 
-  width = 64;
-  height = 64;
+  width = 8;
+  height = 8;
   for (int i = 0; i < BLOCK_SIZE; i++) {
     block[i] = i;
   }
@@ -33,8 +33,8 @@ int sc_main(int argc, char* argv[]) {
     assert(dct_block[i].read() - 0.1 < ERROR && 0.1 -  dct_block[i].read() < ERROR);
   }
 
-  width = 64;
-  height = 64;
+  width = 3;
+  height = 4;
   for (int i = 0; i < BLOCK_SIZE; i++) {
     block[i] = 0;
   }
