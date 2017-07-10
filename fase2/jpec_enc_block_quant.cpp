@@ -12,7 +12,7 @@ SC_MODULE (jpec_enc_block_quant) {
 
   sc_in<float> dct[BLOCK_SIZE];
   sc_in<int> dqt[BLOCK_SIZE];
-  sc_out<float> quant[BLOCK_SIZE];
+  sc_out<int> quant_block[BLOCK_SIZE];
 
   float tmp[BLOCK_SIZE];
 
@@ -26,7 +26,7 @@ SC_MODULE (jpec_enc_block_quant) {
 
   void inc_func() {
     for (int i = 0; i < BLOCK_SIZE; i++) {
-      quant[i].write(dct[i].read()/dqt.read());
+      quant_block[i].write(dct[i].read()/dqt[i].read());
     }
   }
 };

@@ -73,7 +73,7 @@ int sc_main(int argc, char* argv[]) {
 
 
   sc_signal<float> dct[BLOCK_SIZE];
-  sc_signal<int> dqt[BLOCK_SIZE]
+  sc_signal<int> dqt[BLOCK_SIZE];
   sc_signal<int> quant_block[BLOCK_SIZE];
 
   jpec_enc_block_quant quant("quant");
