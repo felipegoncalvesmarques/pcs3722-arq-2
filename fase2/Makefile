@@ -15,7 +15,7 @@ FLAGS           = -g -Wall -pedantic -Wno-long-long \
                  -I$(SYSTEMC_INC_DIR)
 LDFLAGS         = -L$(SYSTEMC_LIB_DIR) -lsystemc -lm
 
-SRCS = sc_main.cpp jpec_enc_block_quant.cpp
+SRCS = sc_main.cpp jpec_enc_block_zz.cpp
 OBJS=$(SRCS:.cpp=.o)
 
 # main

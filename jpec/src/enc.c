@@ -312,9 +312,40 @@ static void jpec_enc_block_quant(jpec_enc_t *e) {
 }
 
 static void jpec_enc_block_zz(jpec_enc_t *e) {
+
+  FILE *fp = fopen("zz.txt", "a");
+
+  fprintf(fp, "Quant\n");
+  for (int row = 0; row < 8; row++) {
+    for (int col = 0; col < 8; col++) {
+      fprintf(fp, "%d ", e->block.quant[row * 8 + col]);
+    }
+    fprintf(fp, "\n");
+  }
+
+  fprintf(fp, "Old ZZ\n");
+  for (int row = 0; row < 8; row++) {
+    for (int col = 0; col < 8; col++) {
+      fprintf(fp, "%d ", e->block.zz[row * 8 + col]);
+    }
+    fprintf(fp, "\n");
+  }
+ 
   assert(e && e->bnum >= 0);
   e->block.len = 0;
   for (int i = 0; i < 64; i++) {
     if ((e->block.zz[i] = e->block.quant[jpec_zz[i]])) e->block.len = i + 1;
   }
+
+  fprintf(fp, "New ZZ\n");
+  for (int row = 0; row < 8; row++) {
+    for (int col = 0; col < 8; col++) {
+      fprintf(fp, "%d ", e->block.zz[row * 8 + col]);
+    }
+    fprintf(fp, "\n");
+  }
+  fclose(fp);
+
+
+
 }

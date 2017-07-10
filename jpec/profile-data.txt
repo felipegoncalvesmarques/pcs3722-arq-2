@@ -3,35 +3,35 @@ Flat profile:
 Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  ms/call  ms/call  name    
- 33.35      0.01     0.01     7500     0.00     0.00  jpec_enc_block_dct
- 33.35      0.02     0.01     7500     0.00     0.00  jpec_enc_block_quant
- 33.35      0.03     0.01     7500     0.00     0.00  jpec_enc_block_zz
-  0.00      0.03     0.00    77277     0.00     0.00  jpec_huff_write_bits
-  0.00      0.03     0.00    33553     0.00     0.00  jpec_buffer_write_byte
-  0.00      0.03     0.00     7501     0.00     0.00  jpec_enc_next_block
-  0.00      0.03     0.00     7500     0.00     0.00  jpec_huff_encode_block
-  0.00      0.03     0.00     7500     0.00     0.00  jpec_huff_encode_block_impl
-  0.00      0.03     0.00       19     0.00     0.00  jpec_buffer_write_2bytes
-  0.00      0.03     0.00        1     0.00     0.00  cvSize
-  0.00      0.03     0.00        1     0.00     0.00  jpec_buffer_del
-  0.00      0.03     0.00        1     0.00     0.00  jpec_buffer_new2
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_close
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_del
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_init_dqt
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_new
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_new2
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_open
-  0.00      0.03     0.00        1     0.00    30.01  jpec_enc_run
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_write_app0
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_write_dht
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_write_dqt
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_write_sof0
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_write_soi
-  0.00      0.03     0.00        1     0.00     0.00  jpec_enc_write_sos
-  0.00      0.03     0.00        1     0.00     0.00  jpec_huff_del
-  0.00      0.03     0.00        1     0.00     0.00  jpec_huff_new
-  0.00      0.03     0.00        1     0.00     0.00  jpec_huff_skel_init
-  0.00      0.03     0.00        1     0.00     0.00  load_image
+ 60.02      0.06     0.06     7500     0.01     0.01  jpec_enc_block_dct
+ 30.01      0.09     0.03     7500     0.00     0.00  jpec_enc_block_zz
+ 10.00      0.10     0.01     7500     0.00     0.00  jpec_enc_block_quant
+  0.00      0.10     0.00    77277     0.00     0.00  jpec_huff_write_bits
+  0.00      0.10     0.00    33553     0.00     0.00  jpec_buffer_write_byte
+  0.00      0.10     0.00     7501     0.00     0.00  jpec_enc_next_block
+  0.00      0.10     0.00     7500     0.00     0.00  jpec_huff_encode_block
+  0.00      0.10     0.00     7500     0.00     0.00  jpec_huff_encode_block_impl
+  0.00      0.10     0.00       19     0.00     0.00  jpec_buffer_write_2bytes
+  0.00      0.10     0.00        1     0.00     0.00  cvSize
+  0.00      0.10     0.00        1     0.00     0.00  jpec_buffer_del
+  0.00      0.10     0.00        1     0.00     0.00  jpec_buffer_new2
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_close
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_del
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_init_dqt
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_new
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_new2
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_open
+  0.00      0.10     0.00        1     0.00   100.04  jpec_enc_run
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_write_app0
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_write_dht
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_write_dqt
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_write_sof0
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_write_soi
+  0.00      0.10     0.00        1     0.00     0.00  jpec_enc_write_sos
+  0.00      0.10     0.00        1     0.00     0.00  jpec_huff_del
+  0.00      0.10     0.00        1     0.00     0.00  jpec_huff_new
+  0.00      0.10     0.00        1     0.00     0.00  jpec_huff_skel_init
+  0.00      0.10     0.00        1     0.00     0.00  load_image
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -69,34 +69,34 @@ notice and this notice are preserved.
 		     Call graph (explanation follows)
 
 
-granularity: each sample hit covers 2 byte(s) for 33.32% of 0.03 seconds
+granularity: each sample hit covers 2 byte(s) for 10.00% of 0.10 seconds
 
 index % time    self  children    called     name
-                0.00    0.03       1/1           main [2]
-[1]    100.0    0.00    0.03       1         jpec_enc_run [1]
-                0.01    0.00    7500/7500        jpec_enc_block_dct [3]
-                0.01    0.00    7500/7500        jpec_enc_block_zz [5]
-                0.01    0.00    7500/7500        jpec_enc_block_quant [4]
+                0.00    0.10       1/1           main [2]
+[1]    100.0    0.00    0.10       1         jpec_enc_run [1]
+                0.06    0.00    7500/7500        jpec_enc_block_dct [3]
+                0.03    0.00    7500/7500        jpec_enc_block_zz [4]
+                0.01    0.00    7500/7500        jpec_enc_block_quant [5]
                 0.00    0.00    7501/7501        jpec_enc_next_block [8]
                 0.00    0.00    7500/7500        jpec_huff_encode_block [9]
                 0.00    0.00       1/1           jpec_enc_open [20]
                 0.00    0.00       1/1           jpec_enc_close [15]
 -----------------------------------------------
                                                  <spontaneous>
-[2]    100.0    0.00    0.03                 main [2]
-                0.00    0.03       1/1           jpec_enc_run [1]
+[2]    100.0    0.00    0.10                 main [2]
+                0.00    0.10       1/1           jpec_enc_run [1]
                 0.00    0.00       1/1           load_image [30]
                 0.00    0.00       1/1           jpec_enc_new [18]
                 0.00    0.00       1/1           jpec_enc_del [16]
 -----------------------------------------------
-                0.01    0.00    7500/7500        jpec_enc_run [1]
-[3]     33.3    0.01    0.00    7500         jpec_enc_block_dct [3]
+                0.06    0.00    7500/7500        jpec_enc_run [1]
+[3]     60.0    0.06    0.00    7500         jpec_enc_block_dct [3]
+-----------------------------------------------
+                0.03    0.00    7500/7500        jpec_enc_run [1]
+[4]     30.0    0.03    0.00    7500         jpec_enc_block_zz [4]
 -----------------------------------------------
                 0.01    0.00    7500/7500        jpec_enc_run [1]
-[4]     33.3    0.01    0.00    7500         jpec_enc_block_quant [4]
------------------------------------------------
-                0.01    0.00    7500/7500        jpec_enc_run [1]
-[5]     33.3    0.01    0.00    7500         jpec_enc_block_zz [5]
+[5]     10.0    0.01    0.00    7500         jpec_enc_block_quant [5]
 -----------------------------------------------
                 0.00    0.00       1/77277       jpec_huff_del [27]
                 0.00    0.00   77276/77277       jpec_huff_encode_block_impl [10]
@@ -314,7 +314,7 @@ Index by function name
   [11] jpec_buffer_write_2bytes [8] jpec_enc_next_block    [9] jpec_huff_encode_block
    [7] jpec_buffer_write_byte [20] jpec_enc_open          [10] jpec_huff_encode_block_impl
    [3] jpec_enc_block_dct      [1] jpec_enc_run           [28] jpec_huff_new
-   [4] jpec_enc_block_quant   [21] jpec_enc_write_app0    [29] jpec_huff_skel_init
-   [5] jpec_enc_block_zz      [22] jpec_enc_write_dht      [6] jpec_huff_write_bits
+   [5] jpec_enc_block_quant   [21] jpec_enc_write_app0    [29] jpec_huff_skel_init
+   [4] jpec_enc_block_zz      [22] jpec_enc_write_dht      [6] jpec_huff_write_bits
   [15] jpec_enc_close         [23] jpec_enc_write_dqt     [30] load_image
   [16] jpec_enc_del           [24] jpec_enc_write_sof0

@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "rdrle.c": "cpp",
-        "enc.c": "cpp"
+        "enc.c": "cpp",
+        "conf.c": "cpp",
+        "buf.c": "cpp"
     }
 }
