@@ -223,14 +223,14 @@ index % time    self  children    called     name
                 0.00    0.00     256/256         compress_output [11]
 [13]     0.0    0.00    0.00     256         encode_mcu_DC_refine [13]
 -----------------------------------------------
-                0.00    0.00     256/256         main [175]
+                0.00    0.00     256/256         main [173]
 [14]     0.0    0.00    0.00     256         get_raw_row [14]
 -----------------------------------------------
                 0.00    0.00     256/256         sep_downsample [21]
 [15]     0.0    0.00    0.00     256         h2v2_downsample [15]
                 0.00    0.00     256/384         expand_right_edge [9]
 -----------------------------------------------
-                0.00    0.00     256/256         main [175]
+                0.00    0.00     256/256         main [173]
 [16]     0.0    0.00    0.00     256         jpeg_write_scanlines [16]
                 0.00    0.00     256/256         process_data_simple_main [17]
 -----------------------------------------------
@@ -468,7 +468,7 @@ index % time    self  children    called     name
 [61]     0.0    0.00    0.00       2         jpeg_alloc_quant_table [61]
                 0.00    0.00       2/41          alloc_small [24]
 -----------------------------------------------
-                0.00    0.00       1/2           main [175]
+                0.00    0.00       1/2           main [173]
                 0.00    0.00       1/2           jpeg_set_defaults [92]
 [62]     0.0    0.00    0.00       2         jpeg_default_colorspace [62]
                 0.00    0.00       2/2           jpeg_set_colorspace [64]
@@ -489,7 +489,7 @@ index % time    self  children    called     name
                 0.00    0.00       2/2           jpeg_quality_scaling [63]
                 0.00    0.00       2/2           jpeg_set_linear_quality [65]
 -----------------------------------------------
-                0.00    0.00       2/2           main [175]
+                0.00    0.00       2/2           main [173]
 [67]     0.0    0.00    0.00       2         parse_switches [67]
                 0.00    0.00      72/72          keymatch [22]
                 0.00    0.00       1/2           jpeg_set_quality [66]
@@ -504,7 +504,7 @@ index % time    self  children    called     name
                 0.00    0.00       3/28          emit_2bytes [25]
                 0.00    0.00       1/26          emit_marker [26]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [70]     0.0    0.00    0.00       1         finish_input_ppm [70]
 -----------------------------------------------
                 0.00    0.00       1/1           jpeg_start_compress [94]
@@ -572,11 +572,11 @@ index % time    self  children    called     name
 [82]     0.0    0.00    0.00       1         jinit_phuff_encoder [82]
                 0.00    0.00       1/41          alloc_small [24]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [83]     0.0    0.00    0.00       1         jinit_read_ppm [83]
                 0.00    0.00       1/41          alloc_small [24]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [84]     0.0    0.00    0.00       1         jpeg_CreateCompress [84]
                 0.00    0.00       1/1           jinit_memory_mgr [81]
 -----------------------------------------------
@@ -588,11 +588,11 @@ index % time    self  children    called     name
 [86]     0.0    0.00    0.00       1         jpeg_destroy [86]
                 0.00    0.00       1/1           self_destruct [101]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [87]     0.0    0.00    0.00       1         jpeg_destroy_compress [87]
                 0.00    0.00       1/1           jpeg_destroy [86]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [88]     0.0    0.00    0.00       1         jpeg_finish_compress [88]
                 0.00    0.00     288/304         compress_output [11]
                 0.00    0.00      19/19          finish_pass_master [27]
@@ -610,7 +610,7 @@ index % time    self  children    called     name
                 0.00    0.00       1/1           self_destruct [101]
 [91]     0.0    0.00    0.00       1         jpeg_mem_term [91]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [92]     0.0    0.00    0.00       1         jpeg_set_defaults [92]
                 0.00    0.00       4/4           add_huff_table [50]
                 0.00    0.00       1/41          alloc_small [24]
@@ -622,7 +622,7 @@ index % time    self  children    called     name
                 0.00    0.00       2/2           fill_dc_scans [60]
                 0.00    0.00       1/41          alloc_small [24]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [94]     0.0    0.00    0.00       1         jpeg_start_compress [94]
                 0.00    0.00       1/1           jpeg_suppress_tables [97]
                 0.00    0.00       1/1           init_destination [71]
@@ -630,10 +630,10 @@ index % time    self  children    called     name
                 0.00    0.00       1/19          prepare_for_pass [28]
                 0.00    0.00       1/1           jinit_compress_master [77]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [95]     0.0    0.00    0.00       1         jpeg_std_error [95]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [96]     0.0    0.00    0.00       1         jpeg_stdio_dest [96]
                 0.00    0.00       1/41          alloc_small [24]
 -----------------------------------------------
@@ -658,7 +658,7 @@ index % time    self  children    called     name
                 0.00    0.00       1/5           jpeg_free_small [48]
                 0.00    0.00       1/1           jpeg_mem_term [91]
 -----------------------------------------------
-                0.00    0.00       1/1           main [175]
+                0.00    0.00       1/1           main [173]
 [102]    0.0    0.00    0.00       1         start_input_ppm [102]
                 0.00    0.00       3/3           read_pbm_integer [56]
                 0.00    0.00       1/1           emit_message [68]
